@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_152751) do
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.string "name"
-    t.datetime "starts_at"
+    t.string "name", null: false
+    t.datetime "starts_at", null: false
     t.datetime "ends_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -36,9 +36,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_152751) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "phone"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "phone", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
